@@ -1,0 +1,19 @@
+server:
+    port: 8091
+    context-path: /dubbo_customer
+    session:
+        timeout: 300
+spring:
+    application:
+        name: dubbo-test-customer
+dubbo:
+    registry:
+        address: 127.0.0.1:2181
+        protocol: zookeeper
+    protocol:
+        name: dubbo
+        port: 20882
+    monitor:
+        protocol: registry
+    consumer:
+        check: false
